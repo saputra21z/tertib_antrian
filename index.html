@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kebijakan Privasi — Tertib Antrian</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65; margin: 0; padding: 40px 20px 80px;
+    background: #fbfcfb; color: #1b1c1a;
+  }
+  main { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.5px; }
+  h2 { font-size: 18px; margin: 34px 0 8px; }
+  h3 { font-size: 15px; margin: 20px 0 6px; }
+  p, li { font-size: 15px; }
+  ul { padding-left: 22px; }
+  li { margin: 4px 0; }
+  a { color: #006b5b; }
+  .muted { color: #5c6660; font-size: 13.5px; }
+  .box {
+    background: #eef3f0; border: 1px solid #dde5e0; border-radius: 12px;
+    padding: 14px 16px; margin: 16px 0;
+  }
+  hr { border: none; border-top: 1px solid #e0e5e1; margin: 40px 0; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #14171a; color: #e6e9e6; }
+    a { color: #62d3bd; }
+    .muted { color: #9aa39d; }
+    .box { background: #1e2529; border-color: #2b333a; }
+    hr { border-top-color: #2b333a; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Kebijakan Privasi</h1>
+<p class="muted">Aplikasi <strong>Tertib Antrian</strong> (paket <code>com.hendcaps.antrio</code>)<br>
+Terakhir diperbarui: 3 September 2026 &middot; Berlaku sejak: 3 September 2026</p>
+
+<p>Kebijakan Privasi ini menjelaskan bagaimana <strong>Hendcaps</strong> ("kami")
+mengumpulkan, menggunakan, menyimpan, dan melindungi data ketika Anda menggunakan
+aplikasi <strong>Tertib Antrian</strong> ("Aplikasi"). Aplikasi ini adalah sistem
+manajemen antrean untuk petugas/pemilik usaha.</p>
+
+<h2>1. Data yang Kami Kumpulkan</h2>
+
+<h3>a. Data akun</h3>
+<ul>
+  <li><strong>Alamat email</strong> — dipakai untuk membuat akun petugas, masuk (login),
+      verifikasi email, dan pemulihan kata sandi.</li>
+  <li><strong>Kata sandi</strong> — tidak pernah kami simpan dalam bentuk teks biasa.
+      Autentikasi ditangani oleh Google Firebase Authentication dan kata sandi
+      disimpan dalam bentuk terenkripsi/hash oleh Firebase.</li>
+</ul>
+
+<h3>b. Data usaha & antrean yang Anda masukkan</h3>
+<ul>
+  <li>Nama usaha, alamat/cabang, jenis usaha, daftar layanan, dan catatan pada struk.</li>
+  <li>Data antrean harian: nomor antrean, jenis layanan, waktu diterbitkan/dipanggil/dilayani,
+      status, dan penanda prioritas.</li>
+</ul>
+<p>Data ini disinkronkan ke basis data <strong>Supabase</strong> agar papan antrean
+dapat ditampilkan di halaman web pemantau dan halaman ambil nomor online. Setiap
+akun hanya dapat mengakses datanya sendiri (dibatasi berdasarkan ID akun Firebase).</p>
+
+<h3>c. Data yang disimpan di perangkat Anda</h3>
+<ul>
+  <li>Pilihan bahasa aplikasi (Indonesia/Inggris).</li>
+  <li>Salinan data antrean & pengaturan usaha per akun, agar tetap tersedia saat
+      aplikasi dibuka kembali atau saat offline.</li>
+  <li><strong>Fitur "Ingat saya"</strong> (opsional): bila Anda mengaktifkannya, email
+      dan kata sandi disimpan secara lokal di perangkat (kata sandi dikodekan dengan
+      base64 — ini hanya untuk kenyamanan pada perangkat pribadi, bukan enkripsi kuat).
+      Data ini tidak dikirim ke server kami dan dapat dihapus dengan menonaktifkan
+      "Ingat saya" atau menghapus data aplikasi.</li>
+</ul>
+
+<h3>d. Data yang TIDAK kami kumpulkan</h3>
+<ul>
+  <li>Kami tidak menampilkan iklan.</li>
+  <li>Kami tidak memakai layanan analitik pihak ketiga atau pelacak (tracker).</li>
+  <li>Kami tidak mengumpulkan lokasi presisi, kontak, foto, atau daftar aplikasi Anda.</li>
+  <li>Kami tidak menjual atau menyewakan data Anda kepada siapa pun.</li>
+</ul>
+
+<h2>2. Izin (Permission) Aplikasi</h2>
+<ul>
+  <li><strong>Internet</strong> — untuk autentikasi dan sinkronisasi data antrean.</li>
+  <li><strong>Bluetooth / perangkat sekitar</strong> — hanya untuk menghubungkan dan
+      mencetak struk ke printer thermal 58&nbsp;mm. Kami tidak memindai atau menyimpan
+      informasi perangkat Bluetooth lain.</li>
+</ul>
+
+<h2>3. Cara Kami Menggunakan Data</h2>
+<ul>
+  <li>Menyediakan fungsi inti: membuat akun, menerbitkan & memanggil nomor antrean,
+      mencetak struk, dan menampilkan papan antrean web.</li>
+  <li>Menyimpan pengaturan & riwayat antrean Anda antar-sesi.</li>
+  <li>Mengirim email verifikasi dan email pemulihan kata sandi.</li>
+</ul>
+<p>Kami memproses data berdasarkan kebutuhan pelaksanaan layanan yang Anda minta.</p>
+
+<h2>4. Layanan Pihak Ketiga</h2>
+<p>Aplikasi menggunakan penyedia berikut untuk memproses data:</p>
+<ul>
+  <li><strong>Google Firebase</strong> (Authentication &amp; Hosting) — Google LLC.
+      Lihat <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">kebijakan privasi Firebase</a>.</li>
+  <li><strong>Supabase</strong> (basis data &amp; sinkronisasi realtime) — Supabase, Inc.
+      Lihat <a href="https://supabase.com/privacy" target="_blank" rel="noopener">kebijakan privasi Supabase</a>.</li>
+</ul>
+<p>Data dapat disimpan di server penyedia ini yang berlokasi di luar Indonesia.</p>
+
+<h2>5. Penyimpanan &amp; Retensi Data</h2>
+<ul>
+  <li>Data akun dan data antrean disimpan selama akun Anda aktif.</li>
+  <li>Anda dapat menekan tombol <strong>"Reset antrean"</strong> di aplikasi untuk
+      menghapus seluruh nomor & riwayat antrean hari itu.</li>
+  <li>Data di perangkat akan hilang bila Anda menghapus data aplikasi atau
+      meng-uninstall Aplikasi.</li>
+</ul>
+
+<h2>6. Menghapus Akun &amp; Data Anda</h2>
+<div class="box">
+  <p style="margin:0">Untuk meminta penghapusan akun beserta seluruh data terkait
+  (email, data usaha, dan data antrean di server), kirim email ke
+  <a href="mailto:hendisaputra201@gmail.com">hendisaputra201@gmail.com</a>
+  dari alamat email akun Anda, dengan subjek <em>"Hapus Akun Tertib Antrian"</em>.
+  Permintaan akan diproses dalam waktu paling lama 30 hari.</p>
+</div>
+
+<h2>7. Keamanan</h2>
+<p>Koneksi ke server menggunakan enkripsi HTTPS/TLS. Autentikasi memakai token dari
+Firebase, dan akses basis data dibatasi oleh aturan keamanan (Row Level Security)
+sehingga tiap akun hanya bisa membaca/menulis datanya sendiri. Walau demikian, tidak
+ada metode transmisi atau penyimpanan elektronik yang 100% aman.</p>
+
+<h2>8. Anak-anak</h2>
+<p>Aplikasi ini ditujukan untuk petugas/pemilik usaha dan tidak diperuntukkan bagi
+anak di bawah 13 tahun. Kami tidak dengan sengaja mengumpulkan data dari anak-anak.</p>
+
+<h2>9. Perubahan Kebijakan</h2>
+<p>Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Perubahan akan
+diumumkan melalui halaman ini dengan memperbarui tanggal "Terakhir diperbarui" di atas.</p>
+
+<h2>10. Kontak</h2>
+<p>Jika ada pertanyaan mengenai Kebijakan Privasi ini atau data Anda:</p>
+<ul>
+  <li>Email: <a href="mailto:hendisaputra201@gmail.com">hendisaputra201@gmail.com</a></li>
+  <li>Pengembang: Hendcaps</li>
+</ul>
+
+<hr>
+<p class="muted">&copy; 2026 Hendcaps — Tertib Antrian. Dokumen ini disediakan untuk
+memenuhi persyaratan Kebijakan Privasi Google Play. Untuk kepastian hukum, tinjau
+bersama penasihat hukum sesuai kebutuhan usaha Anda.</p>
+
+</main>
+</body>
+</html>
